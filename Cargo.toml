@@ -1,7 +1,15 @@
 [package]
-name = "search_core"
+name = "esg-search-core"
 version = "0.1.0"
 edition = "2021"
+rust-version = "1.65"
+description = "State-space search with explicit successor generators and multiple search strategies"
+license = "MIT"
+repository = "https://github.com/AlexTuisov/ESG_search_core"
+documentation = "https://docs.rs/esg-search-core"
+readme = "README.md"
+keywords = ["search", "state-space", "astar", "pathfinding", "algorithms"]
+categories = ["algorithms"]
 
 [dependencies]
 serde = { version = "1.0.210", features = ["derive"] }

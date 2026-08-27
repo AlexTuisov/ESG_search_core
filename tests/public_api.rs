@@ -1,4 +1,4 @@
-use search_core::{
+use esg_search_core::{
     solve_problem, solve_problem_with_input, solve_problem_with_input_str, Action, Problem,
     ProblemInput, SearchStrategy, StateKey,
 };

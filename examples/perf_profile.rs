@@ -1,9 +1,9 @@
-use search_core::algorithms::bfs::BfsQueue;
-use search_core::algorithms::priority_queue::PriorityQueue;
-use search_core::algorithms::weighted_astar::WeightedAStarQueue;
-use search_core::prelude::{ActionTrait, Problem, SearchStrategy, StateKey};
-use search_core::search::engine::{generic_search, generic_search_with_best_cost};
-use search_core::search::search_tree::SearchTree;
+use esg_search_core::algorithms::bfs::BfsQueue;
+use esg_search_core::algorithms::priority_queue::PriorityQueue;
+use esg_search_core::algorithms::weighted_astar::WeightedAStarQueue;
+use esg_search_core::prelude::{ActionTrait, Problem, SearchStrategy, StateKey};
+use esg_search_core::search::engine::{generic_search, generic_search_with_best_cost};
+use esg_search_core::search::search_tree::SearchTree;
 use serde::{Deserialize, Serialize};
 use std::cell::Cell;
 use std::collections::HashSet;

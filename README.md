@@ -1,6 +1,6 @@
-# search_core
+# ESG Search Core
 
-`search_core` is a generic Rust search engine crate for state-space problems.
+`esg-search-core` is a generic Rust search engine crate for state-space problems. ESG stands for Explicit Successor Generator.
 
 It lets users plug in their own:
 - state type
@@ -25,7 +25,7 @@ Add the crate to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-search_core = "0.1.0"
+esg-search-core = "0.1.0"
 serde = { version = "1", features = ["derive"] }
 ```
 
@@ -33,7 +33,7 @@ For local workspace usage:
 
 ```toml
 [dependencies]
-search_core = { path = "../search_core" }
+esg-search-core = { path = "../ESG_search_core" }
 serde = { version = "1", features = ["derive"] }
 ```
 
@@ -42,7 +42,7 @@ serde = { version = "1", features = ["derive"] }
 This example uses `SimpleAction` and omits `heuristic`, so the default `0.0` is used.
 
 ```rust
-use search_core::prelude::*;
+use esg_search_core::prelude::*;
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
@@ -108,7 +108,7 @@ fn main() {
 Use `ProblemInput` when you want input parsing/loading separated from solving:
 
 ```rust
-use search_core::prelude::*;
+use esg_search_core::prelude::*;
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
