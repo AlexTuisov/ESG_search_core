@@ -68,7 +68,7 @@ where
         search_strategy,
         SearchStrategy::AStar | SearchStrategy::WeightedAStar { .. }
     ) {
-        crate::search::search::generic_search_with_best_cost(
+        crate::search::engine::generic_search_with_best_cost(
             &mut tree,
             |state| problem.get_possible_actions(state),
             |state, action| problem.apply_action(state, action),
@@ -77,7 +77,7 @@ where
             |state| problem.heuristic(state),
         )
     } else {
-        crate::search::search::generic_search(
+        crate::search::engine::generic_search(
             &mut tree,
             |state| problem.get_possible_actions(state),
             |state, action| problem.apply_action(state, action),

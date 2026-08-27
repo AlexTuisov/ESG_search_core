@@ -14,6 +14,12 @@ impl BfsQueue {
     }
 }
 
+impl Default for BfsQueue {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl PriorityQueue for BfsQueue {
     fn insert(&mut self, node_index: usize, _cost: i64, _heuristic_value: f64) {
         self.queue.push_back(node_index);

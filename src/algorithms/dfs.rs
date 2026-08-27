@@ -10,6 +10,12 @@ impl DfsQueue {
     }
 }
 
+impl Default for DfsQueue {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl PriorityQueue for DfsQueue {
     fn insert(&mut self, node_index: usize, _cost: i64, _heuristic_value: f64) {
         self.stack.push(node_index);

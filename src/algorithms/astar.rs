@@ -36,6 +36,12 @@ impl AStarQueue {
     }
 }
 
+impl Default for AStarQueue {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl PriorityQueue for AStarQueue {
     fn insert(&mut self, node_index: usize, cost: i64, heuristic: f64) {
         let priority = cost as f64 + heuristic;

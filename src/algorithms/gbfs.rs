@@ -36,6 +36,12 @@ impl GBFSQueue {
     }
 }
 
+impl Default for GBFSQueue {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl PriorityQueue for GBFSQueue {
     fn insert(&mut self, node_index: usize, _cost: i64, heuristic: f64) {
         self.heap.push(Reverse(QueueEntry {
